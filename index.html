@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cool Company</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<img class="logo" src="img/logo.png" alt="logo" />
+
+						<h1 class="offer__title animate__animated animate__backInLeft mt-5">
+							С помощью нас <br />
+							вы сможете создать то, о чем
+						</h1>
+						<span class="offer__span animate__animated animate__backInLeft"
+							>Желаете!</span
+						>
+						<p class="offer__text animate__animated animate__backInLeft mt-3">
+							Наши возможности + опыт помогает нам достичь огромного успеха. Мы
+							верим в вас! И знаем это на 100%. Вас не остановить!
+						</p>
+						<a
+							href="#"
+							class="btn btn-warning animate__animated animate__backInLeft btn-sm mt-2 p-2"
+							id="but"
+							onclick="clicBut();"
+						>
+							Узнать больше...
+						</a>
+					</div>
+					<div class="col-md-6">
+						<img
+							class="img animate__animated animate__flipInX"
+							src="img/header-img.png"
+							alt="offer_picture"
+						/>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="main_info">
+			<div class="container">
+				<h1 class="main_header">Что Вам необходимо?</h1>
+				<div class="row justify-content-center">
+					<div class="col-md-3 text-center py-3 mx-1">
+						<img class="main_picture" src="img/f3.png" alt="one_cart_picture" />
+						<p><a href="#" class="header_cart">Первый блок</a></p>
+						<p class="text_cart">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Voluptatibus expedita vitae soluta sapiente magnam nemo? Ut rerum,
+							consectetur
+						</p>
+					</div>
+					<div class="col-md-3 text-center py-3 mx-1">
+						<img class="main_picture" src="img/f4.png" alt="two_cart_picture" />
+						<p class="mt-2"><a href="#" class="header_cart">Второй блок</a></p>
+						<p class="text_cart">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Voluptatibus expedita vitae soluta sapiente magnam nemo? Ut rerum,
+							consectetur
+						</p>
+					</div>
+					<div class="col-md-3 text-center py-3 mx-1">
+						<img
+							class="main_picture"
+							src="img/f5.png"
+							alt="three_cart_picture"
+						/>
+						<p><a href="#" class="header_cart">Третий блок</a></p>
+						<p class="text_cart">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Voluptatibus expedita vitae soluta sapiente magnam nemo? Ut rerum,
+							consectetur
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form_call">
+			<div class="container">
+				<h1 class="form_header">Форма заказа продукта или услуги</h1>
+				<div class="row justify-content-center">
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<form action="#" method="post" enctype="multipart/form-data">
+							<input
+								class="input my-2"
+								id="name"
+								type="text"
+								placeholder="ФИО"
+								onblur="checkName();"
+							/>
+							<select class="input my-2" id="product" id="product">
+								<option>Карандаш</option>
+								<option>Телефон</option>
+								<option>Воздушный шар</option>
+							</select>
+							<input
+								class="input my-2"
+								type="tel"
+								id="phone"
+								placeholder="Телефон"
+								onblur="checkPhone();"
+							/>
+							<div class="input">Дата доставки(услуги):</div>
+							<input class="input" id="date" type="date" />
+							<button class="btn btn-warning mt-2" onclick="outputData();">
+								Отправить вопрос!
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form_call">
+			<div class="container">
+				<h1 class="form_header">Форма заказа обратного звонка</h1>
+				<div class="row justify-content-center">
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<form action="#" method="post" enctype="multipart/form-data">
+							<input
+								class="input zbonok my-2"
+								type="text"
+								placeholder="Имя"
+								required
+								minlength="2"
+								maxlength="15"
+							/>
+							<input
+								class="input zbonok my-2"
+								type="email"
+								placeholder="Введите свой E-mail"
+								required
+								minlength="5"
+								maxlength="25"
+							/>
+							<input
+								class="input zbonok my-2"
+								type="tel"
+								pattern="[789][0-9]{9}"
+								placeholder="Телефон"
+							/>
+							<input
+								class="input zbonok my-2"
+								type="text"
+								minlength="5"
+								placeholder="Какая тема вас интересует"
+							/>
+							<button class="btn btn-warning mt-2">Отправить вопрос!</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-up">
+				<p class="footer_text">© Все на этом сайте защищено</p>
+			</div>
+			<div class="footer-down"></div>
+		</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/JavaScript.js"></script>
+	</body>
+</html>
